@@ -83,7 +83,7 @@ class LinearCouplingLayer(nn.Module):
         if network_topology is None or len(network_topology) == 0:
             network_topology = [input_dim]
 
-        self.register_buffer('mask', mask)
+        self.register_buffer('mask', mask) # register에 넣어서 학습하지 않도록
 
         self.dim = input_dim
 
